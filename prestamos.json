@@ -1,1 +1,1 @@
-[
+[{"idPrestamo":"L1","idUsuario":"U1","idLibro":"B1","fechaInicioPrestamo":"2024-05-01","fechaVencimientoPrestamo":"2024-05-07","fechaRegresoLibro":"2024-05-10"},{"idPrestamo":"L2","idUsuario":"U2","idLibro":"B2","fechaInicioPrestamo":"2024-05-03","fechaVencimientoPrestamo":"2024-05-09","fechaRegresoLibro":"2024-05-09"},{"idPrestamo":"L3","idUsuario":"U3","idLibro":"B1","fechaInicioPrestamo":"2024-05-11","fechaVencimientoPrestamo":"2024-05-18","fechaRegresoLibro":"2024-05-21"}]

@@ -41,7 +41,8 @@ public class JsonRepositorio implements IRepositorio {
     }
     @Override
     public List<Prestamo> getPrestamos() {
-        return leerLista(archivoPrestamo, new TypeToken<List<Prestamo>>(){}.getType());
+        List<PrestamoDTO> prestamosDTO = leerLista(archivoPrestamo, new TypeToken<List<PrestamoDTO>>(){}.getType());
+        return prestamosDTO.stream().map(PrestamoMapeo::conversorEntidad).collect(Collectors.toList());
     }
     @Override
     public List<Multa> getMultas() {
@@ -57,7 +58,8 @@ public class JsonRepositorio implements IRepositorio {
     }
     @Override
     public void guardarPrestamos(List<Prestamo> prestamos) {
-        escribirLista(archivoPrestamo, prestamos);
+        List<PrestamoDTO> prestamoDTOS = prestamos.stream().map(PrestamoMapeo::conversorDto).collect(Collectors.toList());
+        escribirLista(archivoPrestamo, prestamoDTOS);
     }
     @Override
     public void guardarMultas(List<Multa> multas) {
@@ -82,14 +84,4 @@ public class JsonRepositorio implements IRepositorio {
             throw new RuntimeException("Error escribendo archivo " + archivo, e);
         }
     }
-    public List<Prestamo> leerPrestamos(String archivo) {
-        List<PrestamoDTO> prestamosDTO = leerLista(archivoPrestamo, new TypeToken<List<PrestamoDTO>>(){}.getType());
-        return prestamosDTO.stream().map(PrestamoMapeo::conversorEntidad).collect(Collectors.toList());
-    }
-    public void guardandoPrestamos(List<Prestamo> prestamos){
-        List<PrestamoDTO> prestamoDTOS = prestamos.stream().map(PrestamoMapeo::conversorDto).collect(Collectors.toList());
-        escribirLista(archivoPrestamo, prestamoDTOS);
-    }
-
-
 }

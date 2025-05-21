@@ -55,7 +55,6 @@ public class ServicioLibreria {
         repositorio.getPrestamos().forEach(prestamo -> System.out.println(prestamo.getIdPrestamo() + " | Usuario: " + prestamo.getIdUsuario() + " | " + " | Libro: " + prestamo.getIdLibro() +
                 " | Fecha inicio: " + prestamo.getFechaInicioPrestamo() + " | Fecha devolución: " + prestamo.getFechaRegresoLibro())
         );
-
     }
     public void mostrarUsuarios() {
         repositorio.getUsuarios().forEach(usuario -> System.out.println(usuario.getIdUsuario() + " | " + usuario.getNombreUsuario() + " | " + usuario.getRolUsuario()));
