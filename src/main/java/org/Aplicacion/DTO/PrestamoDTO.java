@@ -1,6 +1,4 @@
-package org.Infraestructura.DTO;
-
-import org.Dominio.Tipos.TipoUsuario;
+package org.Aplicacion.DTO;
 
 public class PrestamoDTO {
     public String idPrestamo;

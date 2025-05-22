@@ -40,9 +40,9 @@ public class Main {
 
         var repo = new JsonRepositorio(archivoUsuario, archivoLibro, archivoPrestamo, archivoMultas);
 
-        repo.guardarUsuarios(usuarios);
-        repo.guardarLibros(libros);
-        repo.guardarPrestamos(prestamos);
+      //  repo.guardarUsuarios(usuarios);
+       // repo.guardarLibros(libros);
+      //  repo.guardarPrestamos(prestamos);
 
         ServicioLibreria servicioLibreria = new ServicioLibreria(repo);
 

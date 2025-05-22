@@ -53,7 +53,7 @@ public class ServicioLibreria {
     }
     public void mostrarPrestamos() {
         repositorio.getPrestamos().forEach(prestamo -> System.out.println(prestamo.getIdPrestamo() + " | Usuario: " + prestamo.getIdUsuario() + " | " + " | Libro: " + prestamo.getIdLibro() +
-                " | Fecha inicio: " + prestamo.getFechaInicioPrestamo() + " | Fecha devolución: " + prestamo.getFechaRegresoLibro())
+                " | Fecha inicio: " + prestamo.getFechaInicioPrestamo() + "| Fecha vencimiento: " +prestamo.getFechaVencimientoPrestamo()+ " | Fecha devolución: " + prestamo.getFechaRegresoLibro())
         );
     }
     public void mostrarUsuarios() {

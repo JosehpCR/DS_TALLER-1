@@ -7,12 +7,11 @@ import org.Dominio.Entidades.Multa;
 import org.Dominio.Entidades.Prestamo;
 import org.Dominio.Entidades.Usuario;
 import org.Dominio.Repositorio.IRepositorio;
-import org.Infraestructura.DTO.PrestamoDTO;
-import org.Infraestructura.DTO.PrestamoMapeo;
+import org.Aplicacion.DTO.PrestamoDTO;
+import org.Aplicacion.DTO.PrestamoMapeo;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

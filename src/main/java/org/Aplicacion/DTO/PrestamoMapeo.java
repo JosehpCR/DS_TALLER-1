@@ -1,4 +1,4 @@
-package org.Infraestructura.DTO;
+package org.Aplicacion.DTO;
 
 import org.Dominio.Entidades.Prestamo;
 
